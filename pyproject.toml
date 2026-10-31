@@ -1,7 +1,7 @@
 [project]
-name = "resenas-negocio-local"
+name = "resenas-negocio-RD"
 version = "0.1.0"
-description = "API Inteligente para reseñas de un negocio local con FastAPI, SQLite y Gemini"
+description = "API Inteligente para reseñas de un negocio RD con FastAPI, SQLite y Gemini"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
