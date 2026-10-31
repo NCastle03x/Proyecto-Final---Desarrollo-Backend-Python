@@ -1,15 +1,15 @@
-# 🌟 API Inteligente de Reseñas de Negocio Local
+# API Inteligente de Reseñas de Negocio RD
 
 API RESTful desarrollada con **FastAPI**, **SQLite** y la **SDK Oficial de Google Gemini (`google-genai`)** para la gestión, clasificación automatizada de sentimientos y síntesis analítica de opiniones de clientes.
 
-## 📋 Descripción del Proyecto
+## Descripción del Proyecto
 
 Esta API permite a los propietarios de negocios locales recopilar, consultar, actualizar y eliminar reseñas de sus clientes. Aprovecha las capacidades de la Inteligencia Artificial Generativa de Google Gemini (`gemini-2.0-flash`) para:
 
 1. **Analizar automáticamente el sentimiento** (`Positivo`, `Neutral` o `Negativo`) de cada comentario ingresado en español en tiempo real.
 2. **Generar un resumen ejecutivo** de la opinión general de los usuarios, destacando los puntos fuertes y las áreas de mejora del negocio.
 
-## 🛠️ Tecnologías Utilizadas
+## tecnologías Utilizadas
 
 * **Lenguaje:** Python 3.10+
 * **Framework Web:** FastAPI
@@ -20,7 +20,7 @@ Esta API permite a los propietarios de negocios locales recopilar, consultar, ac
 * **Inteligencia Artificial:** SDK oficial `google-genai` (Modelo `gemini-2.0-flash`)
 * **Gestión de Entorno:** `python-dotenv`
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```text
 proyecto_resenas/
@@ -38,7 +38,7 @@ proyecto_resenas/
 └── services.py             # Integración y prompts con la IA de Google Gemini
 ```
 
-## 🚀 Tabla de Endpoints
+## Tabla de Endpoints
 
 | Método | Ruta | Descripción | Estado HTTP |
 | :--- | :--- | :--- | :--- |
@@ -49,14 +49,14 @@ proyecto_resenas/
 | `PUT` | `/resenas/{resena_id}` | Actualiza una reseña existente (recalcula el sentimiento si cambia el comentario). | `200 OK` |
 | `DELETE` | `/resenas/{resena_id}` | Elimina una reseña específica de la base de datos por su ID. | `200 OK` |
 
-## ⚠️ Manejo de Errores
+## Manejo de Errores
 
 La API está diseñada para manejar respuestas HTTP estandarizadas frente a excepciones comunes:
 
 * **`404 Not Found`**: Se devuelve cuando se intenta consultar, actualizar (`PUT`) o eliminar (`DELETE`) una reseña cuyo `ID` no existe en la base de datos SQLite.
 * **`422 Unprocessable Entity`**: Proporcionado automáticamente por FastAPI y Pydantic al recibir datos inválidos en el cuerpo de la petición (por ejemplo, si faltan campos obligatorios o la calificación no es un número entero válido dentro del rango 1-5).
 
-## 🔒 Seguridad Básica y Buenas Prácticas
+## Seguridad Básica y Buenas Prácticas
 
 1. **Protección de Credenciales:** La `GEMINI_API_KEY` se carga mediante variables de entorno a través del paquete `python-dotenv` y **nunca está expuesta en el código fuente**.
 2. **Control de Versiones Seguras:** El archivo `.env` está incluido dentro del `.gitignore` para evitar filtraciones accidentales a repositorios públicos. Se provee un archivo `.env.example` en el repositorio como referencia estándar.
@@ -64,7 +64,7 @@ La API está diseñada para manejar respuestas HTTP estandarizadas frente a exce
 
 ---
 
-## ⚙️ Requisitos Previos e Instalación
+## Requisitos Previos e Instalación
 
 ### 1. Clonar o descargar el repositorio
 Asegúrate de tener el código del proyecto en tu equipo local y abrir la carpeta en tu editor de código (por ejemplo, VS Code).
@@ -104,7 +104,7 @@ GEMINI_API_KEY=tu_api_key_aqui
 
 ---
 
-## 💻 Instrucciones de Ejecución
+##  Instrucciones de Ejecución
 
 1. Con el entorno virtual activado y las dependencias instaladas, ejecuta el servidor ASGI:
    ```bash
